@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.3" timestamp="2014-06-14T04:11:50.856">
+<file name="/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/src/main/java/Boton.java">
+<violation beginline="21" endline="23" begincolumn="12" endcolumn="5" rule="UncommentedEmptyConstructor" ruleset="Design Rules" package="JuegoCards" class="Boton" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#UncommentedEmptyConstructor" priority="3">
+Document empty constructor
+</violation>
+</file>
+<file name="/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/src/main/java/Cards.java">
+<violation beginline="94" endline="95" begincolumn="16" endcolumn="31" rule="IfStmtsMustUseBraces" ruleset="Braces Rules" package="JuegoCards" class="Cards" method="esAleatorio" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#IfStmtsMustUseBraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="146" endline="165" begincolumn="9" endcolumn="9" rule="SwitchStmtsShouldHaveDefault" ruleset="Design Rules" package="JuegoCards" class="Cards" method="AsignarCartas" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#SwitchStmtsShouldHaveDefault" priority="3">
+Switch statements should have a default label
+</violation>
+<violation beginline="266" endline="266" begincolumn="39" endcolumn="43" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer Rules" package="JuegoCards" class="Cards" method="verPuntajes" externalInfoUrl="http://pmd.sourceforge.net/rules/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot; \t&quot; appears 5 times in this file; the first occurrence is on line 266
+</violation>
+</file>
+<file name="/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/src/main/java/JPanelConFondo.java">
+<violation beginline="23" endline="25" begincolumn="12" endcolumn="5" rule="UncommentedEmptyConstructor" ruleset="Design Rules" package="JuegoCards" class="JPanelConFondo" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#UncommentedEmptyConstructor" priority="3">
+Document empty constructor
+</violation>
+<violation beginline="42" endline="46" begincolumn="9" endcolumn="9" rule="ConfusingTernary" ruleset="Design Rules" package="JuegoCards" class="JPanelConFondo" method="setImagen" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConfusingTernary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+<violation beginline="58" endline="65" begincolumn="9" endcolumn="9" rule="ConfusingTernary" ruleset="Design Rules" package="JuegoCards" class="JPanelConFondo" method="paint" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConfusingTernary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+</file>
+<file name="/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/src/main/java/JavaApplication1.java">
+<violation beginline="13" endline="25" begincolumn="31" endcolumn="1" rule="UseSingleton" ruleset="Design Rules" package="javaapplication1" class="JavaApplication1" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#UseSingleton" priority="3">
+All methods are static.  Consider using Singleton instead.  Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+</violation>
+</file>
+<file name="/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/src/main/java/Operacion.java">
+<violation beginline="15" endline="17" begincolumn="12" endcolumn="5" rule="UncommentedEmptyConstructor" ruleset="Design Rules" package="javaapplication1" class="Operacion" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#UncommentedEmptyConstructor" priority="3">
+Document empty constructor
+</violation>
+</file>
+<file name="/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/src/main/java/Partida.java">
+<violation beginline="15" endline="15" begincolumn="22" endcolumn="30" rule="UnusedPrivateField" ruleset="Unused Code Rules" package="JuegoCards" class="Partida" variable="horaJuego" externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+Avoid unused private fields such as 'horaJuego'.
+</violation>
+<violation beginline="15" endline="15" begincolumn="13" endcolumn="31" rule="SingularField" ruleset="Design Rules" package="JuegoCards" class="Partida" variable="horaJuego" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#SingularField" priority="3">
+Perhaps 'horaJuego' could be replaced by a local variable.
+</violation>
+<violation beginline="48" endline="49" begincolumn="21" endcolumn="25" rule="ConfusingTernary" ruleset="Design Rules" package="JuegoCards" class="Partida" method="getDate" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConfusingTernary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+<violation beginline="64" endline="100" begincolumn="9" endcolumn="9" rule="SwitchStmtsShouldHaveDefault" ruleset="Design Rules" package="JuegoCards" class="Partida" method="getDate" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#SwitchStmtsShouldHaveDefault" priority="3">
+Switch statements should have a default label
+</violation>
+</file>
+<file name="/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/src/main/java/Tablero.java">
+<violation beginline="32" endline="45" begincolumn="9" endcolumn="9" rule="SwitchStmtsShouldHaveDefault" ruleset="Design Rules" package="JuegoCards" class="Tablero" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#SwitchStmtsShouldHaveDefault" priority="3">
+Switch statements should have a default label
+</violation>
+<violation beginline="48" endline="48" begincolumn="32" endcolumn="48" rule="ConstructorCallsOverridableMethod" ruleset="Design Rules" package="JuegoCards" class="Tablero" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#ConstructorCallsOverridableMethod" priority="1">
+Overridable method 'volverAleatorio' called during object construction
+</violation>
+</file>
+</pmd>

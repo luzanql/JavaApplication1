@@ -1,0 +1,88 @@
+/**
+*/
+apply plugin: 'java'
+apply plugin: 'findbugs'
+apply plugin: 'pmd'
+apply plugin: 'artifactory-publish'
+
+buildscript {
+  repositories {
+    maven {   
+        url "http://localhost:8081/artifactory/gradle"
+        credentials {
+        username = "${artifactory_user}"
+        password = "${artifactory_password}"
+      }
+    }
+
+    dependencies {
+      classpath(group: 'org.jfrog.buildinfo', name: 'build-info-extractor-gradle', version: '2.2.3')
+    }
+  }
+
+}
+
+repositories {
+    maven {   
+        url "http://localhost:8081/artifactory/gradle"
+        credentials {
+        username = "${artifactory_user}"
+        password = "${artifactory_password}"
+      }
+    }
+}
+
+uploadArchives {
+    repositories
+    {
+        flatDir
+        {
+         dirs 'repos'
+         }
+    }
+}
+tasks.withType(FindBugs) {
+	reports {
+	xml.enabled = false
+	html.enabled = true
+	}
+}
+
+tasks.withType(Pmd)
+{
+    ruleSets = ["basic", "braces", "strings", "design", "unusedcode"]
+}
+
+artifactory
+{
+    publish
+    {
+        defaults
+        {
+            publications ('impl')
+        }
+    }
+}
+
+publishing
+{
+publications
+{
+   impl(MavenPublication)
+   {
+       groupId 'edu.univalle'
+       artifactId 'test'
+       version version
+
+       from components.java
+   }
+}
+
+repositories
+{
+   maven
+   {
+      url "repos"
+   }
+}
+}

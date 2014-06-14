@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>FindBugs Report</title>
+<style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+		    color: red;
+		    font-weight: bold;
+		}
+		.priority-2 {
+		    color: orange;
+		    font-weight: bold;
+		}
+		.priority-3 {
+		    color: green;
+		    font-weight: bold;
+		}
+		.priority-4 {
+		    color: blue;
+		    font-weight: bold;
+		}
+		</style>
+<script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+</head>
+<body>
+<h1>
+<a href="http://findbugs.sourceforge.net">FindBugs</a> Report</h1>
+<h2>Project Information</h2>
+<p>Project: 
+		</p>
+<p>FindBugs version: 2.0.1</p>
+<p>Code analyzed:</p>
+<ul>
+<li>/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/build/classes/main/javaapplication1/Operacion.class</li>
+<li>/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/build/classes/main/javaapplication1/JavaApplication1.class</li>
+<li>/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/build/classes/main/JuegoCards/Boton.class</li>
+<li>/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/build/classes/main/JuegoCards/ColeccionPartidas.class</li>
+<li>/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/build/classes/main/JuegoCards/Cards$2.class</li>
+<li>/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/build/classes/main/JuegoCards/Cards.class</li>
+<li>/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/build/classes/main/JuegoCards/Partida.class</li>
+<li>/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/build/classes/main/JuegoCards/Cards$3.class</li>
+<li>/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/build/classes/main/JuegoCards/Tablero.class</li>
+<li>/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/build/classes/main/JuegoCards/Cards$4.class</li>
+<li>/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/build/classes/main/JuegoCards/cardsApplet.class</li>
+<li>/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/build/classes/main/JuegoCards/JPanelConFondo.class</li>
+<li>/home/Luzanql/Documentos/PruebasdeSoftware/Mockito/JavaApplication1/build/classes/main/JuegoCards/Cards$1.class</li>
+</ul>
+<p>
+<br />
+<br />
+</p>
+<h2>Metrics</h2>
+<p>595 lines of code analyzed,
+	in 13 classes, 
+	in 2 packages.</p>
+<table cellspacing="2" cellpadding="5" width="500">
+<tr class="tableheader">
+<th align="left">Metric</th>
+<th align="right">Total</th>
+<th align="right">Density*</th>
+</tr>
+<tr class="tablerow0">
+<td>High Priority Warnings</td>
+<td align="right" />
+<td align="right">0.00</td>
+</tr>
+<tr class="tablerow1">
+<td>Medium Priority Warnings</td>
+<td align="right">13</td>
+<td align="right">21.85</td>
+</tr>
+<tr class="$totalClass">
+<td>
+<b>Total Warnings</b>
+</td>
+<td align="right">
+<b>13</b>
+</td>
+<td align="right">
+<b>21.85</b>
+</td>
+</tr>
+</table>
+<p>
+<i>(* Defects per Thousand lines of non-commenting source statements)</i>
+</p>
+<p>
+<br />
+<br />
+</p>
+<h2>Contents</h2>
+<ul>
+<li>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</li>
+<li>
+<a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+</li>
+<li>
+<a href="#Warnings_STYLE">Dodgy code Warnings</a>
+</li>
+<li>
+<a href="#Details">Details</a>
+</li>
+</ul>
+<h1>Summary</h1>
+<table cellspacing="2" cellpadding="5" width="500">
+<tr class="tableheader">
+<th align="left">Warning Type</th>
+<th align="right">Number</th>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</td>
+<td align="right">6</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+</td>
+<td align="right">3</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_STYLE">Dodgy code Warnings</a>
+</td>
+<td align="right">4</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<b>Total</b>
+</td>
+<td align="right">
+<b>13</b>
+</td>
+</tr>
+</table>
+<h1>Warnings</h1>
+<p>Click on a warning row to see full context information.</p>
+<h2>
+<a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</h2>
+<table cellspacing="0" width="100%" class="warningtable">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr onclick="toggleRow('N10036');" class="tablerow1">
+<td>
+<span class="priority-2">Dm</span>
+</td>
+<td>JuegoCards.Cards.actionPerformed(ActionEvent) invokes System.exit(...), which shuts down the entire virtual machine</td>
+</tr>
+<tr class="detailrow1">
+<td />
+<td>
+<p style="display: none;" id="N10036">
+<a href="#DM_EXIT">Bug type DM_EXIT (click for details)</a>
+<br />In class JuegoCards.Cards<br />In method JuegoCards.Cards.actionPerformed(ActionEvent)<br />At Cards.java:[line 412]</p>
+</td>
+</tr>
+<tr onclick="toggleRow('N102B1');" class="tablerow0">
+<td>
+<span class="priority-2">Nm</span>
+</td>
+<td>The method name javaapplication1.Operacion.Sumar(double, double) doesn't start with a lower case letter</td>
+</tr>
+<tr class="detailrow0">
+<td />
+<td>
+<p style="display: none;" id="N102B1">
+<a href="#NM_METHOD_NAMING_CONVENTION">Bug type NM_METHOD_NAMING_CONVENTION (click for details)</a>
+<br />In class javaapplication1.Operacion<br />In method javaapplication1.Operacion.Sumar(double, double)<br />At Operacion.java:[line 21]</p>
+</td>
+</tr>
+<tr onclick="toggleRow('N1006B');" class="tablerow1">
+<td>
+<span class="priority-2">Nm</span>
+</td>
+<td>The method name JuegoCards.Cards.AsignarCartas() doesn't start with a lower case letter</td>
+</tr>
+<tr class="detailrow1">
+<td />
+<td>
+<p style="display: none;" id="N1006B">
+<a href="#NM_METHOD_NAMING_CONVENTION">Bug type NM_METHOD_NAMING_CONVENTION (click for details)</a>
+<br />In class JuegoCards.Cards<br />In method JuegoCards.Cards.AsignarCartas()<br />At Cards.java:[lines 141-184]</p>
+</td>
+</tr>
+<tr onclick="toggleRow('N100A0');" class="tablerow0">
+<td>
+<span class="priority-2">Nm</span>
+</td>
+<td>The method name JuegoCards.Cards.IconosAleatorios() doesn't start with a lower case letter</td>
+</tr>
+<tr class="detailrow0">
+<td />
+<td>
+<p style="display: none;" id="N100A0">
+<a href="#NM_METHOD_NAMING_CONVENTION">Bug type NM_METHOD_NAMING_CONVENTION (click for details)</a>
+<br />In class JuegoCards.Cards<br />In method JuegoCards.Cards.IconosAleatorios()<br />At Cards.java:[lines 124-136]</p>
+</td>
+</tr>
+<tr onclick="toggleRow('N100D5');" class="tablerow1">
+<td>
+<span class="priority-2">Nm</span>
+</td>
+<td>The method name JuegoCards.Cards.ObtenerAleatorios(int) doesn't start with a lower case letter</td>
+</tr>
+<tr class="detailrow1">
+<td />
+<td>
+<p style="display: none;" id="N100D5">
+<a href="#NM_METHOD_NAMING_CONVENTION">Bug type NM_METHOD_NAMING_CONVENTION (click for details)</a>
+<br />In class JuegoCards.Cards<br />In method JuegoCards.Cards.ObtenerAleatorios(int)<br />At Cards.java:[lines 104-119]</p>
+</td>
+</tr>
+<tr onclick="toggleRow('N1028E');" class="tablerow0">
+<td>
+<span class="priority-2">Nm</span>
+</td>
+<td>The class name JuegoCards.cardsApplet doesn't start with an upper case letter</td>
+</tr>
+<tr class="detailrow0">
+<td />
+<td>
+<p style="display: none;" id="N1028E">
+<a href="#NM_CLASS_NAMING_CONVENTION">Bug type NM_CLASS_NAMING_CONVENTION (click for details)</a>
+<br />In class JuegoCards.cardsApplet<br />At cardsApplet.java:[lines 14-25]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_PERFORMANCE">Performance Warnings</a>
+</h2>
+<table cellspacing="0" width="100%" class="warningtable">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr onclick="toggleRow('N1010A');" class="tablerow1">
+<td>
+<span class="priority-2">SBSC</span>
+</td>
+<td>JuegoCards.Cards.verPuntajes() concatenates strings using + in a loop</td>
+</tr>
+<tr class="detailrow1">
+<td />
+<td>
+<p style="display: none;" id="N1010A">
+<a href="#SBSC_USE_STRINGBUFFER_CONCATENATION">Bug type SBSC_USE_STRINGBUFFER_CONCATENATION (click for details)</a>
+<br />In class JuegoCards.Cards<br />In method JuegoCards.Cards.verPuntajes()<br />At Cards.java:[line 266]</p>
+</td>
+</tr>
+<tr onclick="toggleRow('N101BC');" class="tablerow0">
+<td>
+<span class="priority-2">SBSC</span>
+</td>
+<td>JuegoCards.ColeccionPartidas.MostrarPartidas() concatenates strings using + in a loop</td>
+</tr>
+<tr class="detailrow0">
+<td />
+<td>
+<p style="display: none;" id="N101BC">
+<a href="#SBSC_USE_STRINGBUFFER_CONCATENATION">Bug type SBSC_USE_STRINGBUFFER_CONCATENATION (click for details)</a>
+<br />In class JuegoCards.ColeccionPartidas<br />In method JuegoCards.ColeccionPartidas.MostrarPartidas()<br />At ColeccionPartidas.java:[line 59]</p>
+</td>
+</tr>
+<tr onclick="toggleRow('N10226');" class="tablerow1">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread field: JuegoCards.Partida.horaJuego</td>
+</tr>
+<tr class="detailrow1">
+<td />
+<td>
+<p style="display: none;" id="N10226">
+<a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+<br />In class JuegoCards.Partida<br />Field JuegoCards.Partida.horaJuego<br />At Partida.java:[line 128]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_STYLE">Dodgy code Warnings</a>
+</h2>
+<table cellspacing="0" width="100%" class="warningtable">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr onclick="toggleRow('N10174');" class="tablerow1">
+<td>
+<span class="priority-2">DLS</span>
+</td>
+<td>Dead store to p in JuegoCards.ColeccionPartidas.MostrarPartidas()</td>
+</tr>
+<tr class="detailrow1">
+<td />
+<td>
+<p style="display: none;" id="N10174">
+<a href="#DLS_DEAD_LOCAL_STORE">Bug type DLS_DEAD_LOCAL_STORE (click for details)</a>
+<br />In class JuegoCards.ColeccionPartidas<br />In method JuegoCards.ColeccionPartidas.MostrarPartidas()<br />Local variable named p<br />At ColeccionPartidas.java:[line 57]</p>
+</td>
+</tr>
+<tr onclick="toggleRow('N1013F');" class="tablerow0">
+<td>
+<span class="priority-2">SF</span>
+</td>
+<td>Switch statement found in JuegoCards.Cards.AsignarCartas() where default case is missing</td>
+</tr>
+<tr class="detailrow0">
+<td />
+<td>
+<p style="display: none;" id="N1013F">
+<a href="#SF_SWITCH_NO_DEFAULT">Bug type SF_SWITCH_NO_DEFAULT (click for details)</a>
+<br />In class JuegoCards.Cards<br />In method JuegoCards.Cards.AsignarCartas()<br />At Cards.java:[lines 146-163]</p>
+</td>
+</tr>
+<tr onclick="toggleRow('N101F1');" class="tablerow1">
+<td>
+<span class="priority-2">SF</span>
+</td>
+<td>Switch statement found in JuegoCards.Partida.getDate() where default case is missing</td>
+</tr>
+<tr class="detailrow1">
+<td />
+<td>
+<p style="display: none;" id="N101F1">
+<a href="#SF_SWITCH_NO_DEFAULT">Bug type SF_SWITCH_NO_DEFAULT (click for details)</a>
+<br />In class JuegoCards.Partida<br />In method JuegoCards.Partida.getDate()<br />At Partida.java:[lines 64-99]</p>
+</td>
+</tr>
+<tr onclick="toggleRow('N10259');" class="tablerow0">
+<td>
+<span class="priority-2">SF</span>
+</td>
+<td>Switch statement found in new JuegoCards.Tablero(int, Vector) where default case is missing</td>
+</tr>
+<tr class="detailrow0">
+<td />
+<td>
+<p style="display: none;" id="N10259">
+<a href="#SF_SWITCH_NO_DEFAULT">Bug type SF_SWITCH_NO_DEFAULT (click for details)</a>
+<br />In class JuegoCards.Tablero<br />In method new JuegoCards.Tablero(int, Vector)<br />At Tablero.java:[lines 32-43]</p>
+</td>
+</tr>
+</table>
+<h1>
+<a name="Details">Details</a>
+</h1>
+<h2>
+<a name="DLS_DEAD_LOCAL_STORE">DLS_DEAD_LOCAL_STORE: Dead store to local variable</a>
+</h2>
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables.  Because FindBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    
+<h2>
+<a name="DM_EXIT">DM_EXIT: Method invokes System.exit(...)</a>
+</h2>
+
+  <p> Invoking System.exit shuts down the entire Java virtual machine. This
+   should only been done when it is appropriate. Such calls make it
+   hard or impossible for your code to be invoked by other code.
+   Consider throwing a RuntimeException instead.</p>
+
+    
+<h2>
+<a name="NM_CLASS_NAMING_CONVENTION">NM_CLASS_NAMING_CONVENTION: Class names should start with an upper case letter</a>
+</h2>
+
+  <p> Class names should be nouns, in mixed case with the first letter of each internal word capitalized. Try to keep your class names simple and descriptive. Use whole words-avoid acronyms and abbreviations (unless the abbreviation is much more widely used than the long form, such as URL or HTML).
+</p>
+
+    
+<h2>
+<a name="NM_METHOD_NAMING_CONVENTION">NM_METHOD_NAMING_CONVENTION: Method names should start with a lower case letter</a>
+</h2>
+
+  <p>
+Methods should be verbs, in mixed case with the first letter lowercase, with the first letter of each internal word capitalized.
+</p>
+
+    
+<h2>
+<a name="SBSC_USE_STRINGBUFFER_CONCATENATION">SBSC_USE_STRINGBUFFER_CONCATENATION: Method concatenates strings using + in a loop</a>
+</h2>
+
+<p> The method seems to be building a String using concatenation in a loop.
+In each iteration, the String is converted to a StringBuffer/StringBuilder,
+   appended to, and converted back to a String.
+   This can lead to a cost quadratic in the number of iterations,
+   as the growing string is recopied in each iteration. </p>
+
+<p>Better performance can be obtained by using
+a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
+
+<p> For example:</p>
+<pre>
+  // This is bad
+  String s = "";
+  for (int i = 0; i &lt; field.length; ++i) {
+    s = s + field[i];
+  }
+
+  // This is better
+  StringBuffer buf = new StringBuffer();
+  for (int i = 0; i &lt; field.length; ++i) {
+    buf.append(field[i]);
+  }
+  String s = buf.toString();
+</pre>
+
+    
+<h2>
+<a name="SF_SWITCH_NO_DEFAULT">SF_SWITCH_NO_DEFAULT: Switch statement found where default case is missing</a>
+</h2>
+
+  <p> This method contains a switch statement where default case is missing.
+  Usually you need to provide a default case.</p>
+
+    
+<h2>
+<a name="URF_UNREAD_FIELD">URF_UNREAD_FIELD: Unread field</a>
+</h2>
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    </body>
+</html>

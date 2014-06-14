@@ -1,0 +1,30 @@
+{
+  "name" : "JavaApplication1",
+  "type" : "GRADLE",
+  "number" : "1402742223432",
+  "version" : "1.0.1",
+  "agent" : {
+    "name" : "Gradle",
+    "version" : "1.0-milestone-8"
+  },
+  "buildAgent" : {
+    "name" : "Gradle",
+    "version" : "1.0-milestone-8"
+  },
+  "started" : "2014-06-14T05:36:59.293-0500",
+  "durationMillis" : 4972,
+  "artifactoryPrincipal" : "deployer",
+  "licenseControl" : {
+    "runChecks" : false,
+    "includePublishedArtifacts" : false,
+    "autoDiscover" : false,
+    "licenseViolationsRecipientsList" : "",
+    "scopesList" : ""
+  },
+  "buildRetention" : {
+    "count" : -1,
+    "deleteBuildArtifacts" : true,
+    "buildNumbersNotToBeDiscarded" : [ ]
+  },
+  "principal" : "Luzanql"
+}
